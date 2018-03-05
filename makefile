@@ -1,4 +1,4 @@
-xOBJECTS= main.o draw.o display.o matrix.o parser.o
+OBJECTS= main.o draw.o display.o matrix.o parser.o
 CFLAGS= -Wall
 LDFLAGS= -lm
 CC= gcc
@@ -6,7 +6,7 @@ CC= gcc
 run: main
 	./main script
 
-all: $(OBJECTS)
+main: $(OBJECTS)
 	$(CC) -o main $(OBJECTS) $(LDFLAGS)
 
 main.o: main.c display.h draw.h ml6.h matrix.h parser.h
